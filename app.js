@@ -8,8 +8,18 @@ var express = require('express')
 var twitpic = require('twitpic').TwitPic;
 var redis = require('redis');
 var io = require('socket.io');
-var redisClient = redis.createClient();
-var subscriber = redis.createClient();
+var redisClient, subscriber;
+
+if (process.env.REDISTOGO_URL) {
+  var rtg   = require("url").parse(process.env.REDISTOGO_URL);
+  redisClient = redis.createClient(rtg.port, rtg.hostname);
+  subscriber = redis.createClient(rtg.port, rtg.hostname);
+  redisClient.auth(rtg.auth.split(":")[1]);
+  subscriber.auth(rtg.auth.split(":")[1]);
+} else {
+  redisClient = redis.createClient();
+  subscriber = redis.createClient();
+}
 
 var app = module.exports = express.createServer();
 
