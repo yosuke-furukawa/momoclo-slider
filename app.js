@@ -9,6 +9,7 @@ var twitpic = require('twitpic').TwitPic;
 var redis = require('redis');
 var io = require('socket.io');
 var redisClient, subscriber;
+var port = process.env.PORT || 3000;
 
 if (process.env.REDISTOGO_URL) {
   var rtg   = require("url").parse(process.env.REDISTOGO_URL);
@@ -144,7 +145,7 @@ subscriber.on('message', function(channel, message) {
   io.sockets.emit('updated', JSON.parse(message));
 });
 
-app.listen(3000, function(){
+app.listen(port, function(){
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
 });
 //  twitter.search(keyword, {}, function(err, data) {
