@@ -1,0 +1,16 @@
+#container
+  header
+    h1
+      strong Momoclo Slider
+    button(class="play") play
+    button(class="stop") stop
+  #main
+    #main-inner
+      #slider
+  footer
+script(src="javascripts/jquery-1.7.1.min.js")
+script(src="javascripts/miniSlider.js")
+script(type='text/javascript')
+  $(function() {
+    $('#slider').miniSlider();
+  });

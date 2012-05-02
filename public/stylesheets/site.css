@@ -1,0 +1,164 @@
+body {
+    font-family: helvetica,'Georgia',arial,sans-serif;
+    background-color: #fafbf1;
+    color: #3C3C3C;
+}
+
+h1 {
+    font-size: 24px;
+    line-height: 48px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #3c3c3c;
+}
+
+h1 strong {
+    font-weight: bold;
+}
+
+#container {
+    width: 1260px;
+    font-weight: 100;
+    margin:  0 auto;
+}
+
+#main {
+    width: 1280px;
+    margin:  0 auto;
+}
+
+/* SLIDER */
+
+#main-inner {
+    position: relative;
+    height: 00px;
+    width: 1260px;
+}
+
+#slider {
+    height: 720px;
+    width: 1260px;
+}
+
+#slider figure {
+    margin: 0;
+    height: 720px;
+    width: 1260px;
+    position: relative;
+}
+
+#slider img {
+    max-height: 720px;
+    max-width: 1260px;
+}
+
+#slider figcaption {
+    position: absolute;
+    bottom: 0;
+    top: 620px;
+    width: 1238px;
+    padding-left: 20px;
+    color: #D5D5D5;
+    margin: 0;
+    border-top: 1px solid #979797;
+    border-bottom: 0;
+    background: #222;
+    opacity: 0.9;
+    font-weight: 100;
+    -moz-opacity: 0.9;
+    filter:alpha(opacity=9);
+}
+
+#slider figcaption h2 {
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 2px;
+    font-weight: 100;
+    color: gray;
+}
+
+#slider figcaption p {
+    font-size: 13px;
+}
+
+
+
+/* SLIDER CONTAINER */
+
+.slider-container {
+    border: 1px solid #222;
+    width: 1258px;
+    height: 720px;
+    overflow: hidden;
+}
+
+a, a:hover, a:visited {
+    text-decoration: none;
+    color: #fff;
+}
+
+.previousBtn, .nextBtn {
+    position: absolute;
+    top: 120px;
+    width: 40px;
+    height: 40px;
+    font-size: 60px;
+    font-weight: 100;
+    line-height: 30px;
+    color: #fff;
+    text-align: center;
+    background: #222;
+    border: 3px solid #fff;
+    border-radius: 23px;
+    opacity: 0.7;
+    -moz-opacity: 0.7;
+    filter:alpha(opacity=7);
+}
+
+.previousBtn:hover, .nextBtn:hover {
+    opacity: 0.9;
+    -moz-opacity: 0.9;
+    filter:alpha(opacity=9);
+}
+
+.previousBtn {
+    left: 10px;
+}
+
+.nextBtn {
+    right: 10px;
+}
+
+/* PAGiNATION */
+.pagination {
+    position: absolute;
+    top: 10px;
+    margin: 0;
+    padding: 0;
+    right: 6px;
+
+}
+
+.pagination li {
+    list-style: none;
+    float: left;
+    margin: 0 5px;
+}
+
+.pagination li a {
+    width: 10px;
+    height: 10px;
+    border-radius: 23px;
+    background: #fff;
+    text-indent: -9999px;
+    display: block;
+    opacity: 0.5;
+    -moz-opacity: 0.5;
+    filter:alpha(opacity=5);
+}
+
+.pagination li.currentPagination a, .pagination li a:hover {
+  opacity: 0.9;
+  -moz-opacity: 0.9;
+  filter:alpha(opacity=9);
+}
